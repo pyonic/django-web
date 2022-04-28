@@ -1,0 +1,296 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% load localize %}
+{% load translate %}
+{% block content %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+		<!-- Slider -->
+        <div class="main-slider style-two default-banner" id="home">
+            <div class="tp-banner-container">
+                <div class="tp-banner">
+					<div id="rev_slider_1175_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="duotone192" data-source="gallery" style="background-color:transparent;padding:0px;">
+						<!-- START REVOLUTION SLIDER 5.3.0.2 fullscreen mode -->
+						<div id="rev_slider_1175_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.3.0.2">
+							<ul>	
+								<!-- SLIDE  -->
+								{% for banner in banners %}
+								<li data-index="rs-3239" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{% static 'images/main-slider/slide20.jpg' %}" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+									<!-- MAIN IMAGE -->
+									<img src="{{ banner.image.url }}" alt="" data-lazyload="{{ banner.image.url }}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg" data-no-retina="">
+									<!-- LAYERS -->
+									<div class="tp-caption tp-shape tp-shapewrapper " id="slide-100-layer" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}]' data-textalign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 2;background-color:rgba(0, 0, 0, 0.1);border-color:rgba(0, 0, 0, 0);border-width:0px; background-image:url(images/overlay/rrdiagonal-line.png)"> </div>
+									        <!-- BACKGROUND VIDEO LAYER -->
+									<div class="rs-background-video-layer" data-forcerewind="on" data-volume="mute" data-videowidth="100%" data-videoheight="100%" data-videomp4="video/video.mp4" data-videopreload="auto" data-videoloop="loop" data-aspectratio="16:9" data-autoplay="true" data-autoplayonlyfirsttime="false"></div>
+									<!-- LAYER NR. 1 -->
+									<div class="tp-caption   rs-parallaxlevel-4" id="slide-3239-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-50','-20']" data-fontsize="['60','60','40','30']" data-lineheight="['75','75','50','40']" data-width="['720','640','480','300']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px;  color: rgba(255, 255, 255, 1.00);font-family:'Merriweather', serif;border-width:0px; font-weight:600;">{% localize banner 'title' lang %}
+									</div>
+									<div class="tp-caption   rs-parallaxlevel-4" id="slide-3239-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['40','40','15','40']" data-fontsize="['22','22','20','16']" data-lineheight="['32','32','30','24']" data-width="['720','640','480','300']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"y:20px;sX:0.9;sY:0.9;opacity:0;","speed":1000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textalign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 720px; max-width: 720px; white-space: normal; font-size: 60px; line-height: 70px;  color: rgba(255, 255, 255, 1.00);font-family:Roboto;border-width:0px; font-weight:400;">{% localize banner 'subtitle' lang %}
+									</div>
+								</li>
+								{% endfor %}
+								<!-- SLIDE  -->
+							</ul>
+							<div class="tp-bannertimer" style="height: 8px; background-color: rgba(255, 255, 255, 0.25);"></div>	
+						</div>
+					</div>        
+				</div>        
+			</div>        
+		</div>        
+		<!-- Slider END -->
+        <!-- contact area -->
+        <div class="content-block">
+			<!-- Our Story -->
+			<div class="section-full content-inner bg-white" id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-6">
+							<div class="row">
+								{% for fit in features %}
+								<div class="col-lg-4 col-md-12 col-sm-6 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.3s">
+									<div class="dlab-box-bg m-b30 box-hover style3" style="background-image: url(images/gallery/pic1.jpg' %})">
+										<div class="icon-bx-wraper center p-lr10 p-tb40">
+											<div class="text-primary m-b20"> 
+												<span class="icon-cell icon-md"><i class="{{ fit.icon }}"></i></span> 
+											</div>
+											<div class="icon-content">
+												<h5 class="dlab-tilte">{% localize fit 'title' lang %}</h5>
+												<p>{% localize fit 'description' lang %}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 m-b30 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+							<div class="request-form dezPlaceAni">
+								<div class="request-form-header">
+									<i class="las la-envelope-open"></i>
+									<p>{% translate 'contacts' 'subtitle' lang %}</p>
+									<h2>{% translate 'contacts' 'title' lang %}</h2>
+								</div>
+								<form method="POST">
+									{% csrf_token %}
+									<div class="form-group">
+										<div class="input-group">
+											<label>{% translate 'contacts' 'f_name' lang %}</label>
+											<input name="name" type="text" required="" class="form-control" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<label>{% translate 'contacts' 'f_email' lang %}</label>
+											<input name="email" type="email" required="" class="form-control" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<label>{% translate 'contacts' 'f_phone' lang %}</label>
+											<input name="phone" type="text" required="" class="form-control" placeholder="">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<label>{% translate 'contacts' 'f_message' lang %}</label>
+											<textarea name="messgae" class="form-control"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<button class="site-button btnhover19 button-md btn-block btn-tb">{% translate 'contacts' 'button' lang %}</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Our Story End -->
+			<!-- Service Info Head -->
+			<div class="section-full content-inner-2 wow fadeIn overlay-black-dark bg-img-fix" data-wow-duration="2s" data-wow-delay="0.2s" style="background-image:url({% static 'images/background/bg1.jpg' %});">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center service-info text-white">
+							<h2 class="title text-white">{% localize about 'title' lang %}</h2>
+							<p class="m-b30">{% localize about 'description' lang %}</p>
+							<a href="{% url 'main:about' %}" class="site-button btnhover19 button-md btn-tb">{% translate 'about' 'detail' lang %}<i class="las la-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Service Info Head End -->
+			<!-- Features -->
+			<!-- <div class="section-full content-inner bg-gray">
+				<div class="container">
+					<div class="section-head text-black text-center">
+						<h2 class="title">Our Services</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6 m-b30 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+							<div class="dlab-box service-box-2">
+								<div class="dlab-media radius-sm dlab-img-overlay1 dlab-img-effect rotate"> 
+									<a href="services-1.html"><img src="{% static 'images/our-work/pic1.jpg' %}" alt=""></a> 
+								</div>
+								<div class="dlab-info">
+									<h4 class="title"><a href="services-1.html">Special Education</a></h4>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									<a href="services-1.html" class="site-button btnhover19 btn-tb">Learn More</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 m-b30 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+							<div class="dlab-box service-box-2">
+								<div class="dlab-media radius-sm dlab-img-overlay1 dlab-img-effect rotate"> 
+									<a href="services-1.html"><img src="{% static 'images/our-work/pic2.jpg' %}" alt=""></a> 
+								</div>
+								<div class="dlab-info">
+									<h4 class="title"><a href="services-1.html">Full Day Session</a></h4>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									<a href="services-1.html" class="site-button btnhover19 btn-tb">Learn More</a> 
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 m-b30 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.9s">
+							<div class="dlab-box service-box-2">
+								<div class="dlab-media radius-sm dlab-img-overlay1 dlab-img-effect rotate"> 
+									<a href="services-1.html"><img src="{% static 'images/our-work/pic3.jpg' %}" alt=""></a> 
+								</div>
+								<div class="dlab-info">
+									<h4 class="title"><a href="services-1.html">Qualified Teachers</a></h4>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									<a href="services-1.html" class="site-button btnhover19 btn-tb">Learn More</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6 m-b30 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+							<div class="dlab-box service-box-2">
+								<div class="dlab-media radius-sm dlab-img-overlay1 dlab-img-effect rotate"> 
+									<a href="services-1.html"><img src="{% static 'images/our-work/pic4.jpg' %}" alt=""></a> 
+								</div>
+								<div class="dlab-info">
+									<h4 class="title"><a href="services-1.html">Events</a></h4>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+									<a href="services-1.html" class="site-button btnhover19 btn-tb">Learn More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<!-- Features End -->
+			<!-- Call To Action --> 
+			<div class="section-full call-action style1 bg-primary wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-9 text-black">
+							<h2 class="title">{% translate 'contacts' 'contact_us' lang %}</h2>
+						</div>
+						<div class="col-lg-3 d-flex">
+							<a href="{% url 'main:contacts' %}" class="site-button black outline align-self-center ms-auto btnhover19">{% translate 'contacts' 'contact_btn' lang %}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Call To Action End -->
+			<!-- Courses -->
+			<!-- Latests News -->
+			{% if news %}
+			<div class="section-full content-inner bg-gray wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
+				<div class="container">
+					<div class="section-head text-black text-center">
+						<h2 class="title">{% translate 'news' 'title' lang %}</h2>
+					</div>
+					<div class="blog-carousel owl-carousel owl-btn-3 owl-btn-center-lr">
+						{% for new in news %}
+						<div class="item">
+							<div class="blog-post blog-grid blog-rounded blog-effect1">
+                                <div class="dlab-post-media dlab-img-effect"> 
+									<a href="blog-single.html"><img src="{% static 'images/our-work/college/pic6.jpg' %}" alt=""></a> 
+								</div>
+								<div class="dlab-info p-a20">
+                                    <div class="dlab-post-meta">
+										<ul>
+											<li class="post-author"> <i class="la la-user-circle"></i>{{ new.author }}</li>
+										</ul>
+									</div>
+									<div class="dlab-post-title ">
+                                        <h4 class="post-title"><a href="blog-single.html">{% localize new 'title' lang %}</a></h4>
+                                    </div>
+                                    <div class="dlab-post-text">
+                                        <p>{% localize new 'description' lang %}</p>
+                                    </div>
+									<div class="post-footer">
+										<div class="dlab-post-meta">
+											<ul>
+												<li class="post-date"> <i class="la la-clock"></i> <strong>{{ new.created_at|date:'Y-m-d H:i' }}</strong></li>
+											</ul>
+										</div>
+										<ul class="dlab-social-icon dez-border">
+											<li><a class="site-button facebook circle-sm fab fa-facebook-f" href="javascript:void(0);"></a></li>
+											<li><a class="site-button twitter circle-sm fab fa-twitter " href="javascript:void(0);"></a></li>
+											<li><a class="site-button linkedin circle-sm fab fa-linkedin-in " href="javascript:void(0);"></a></li>
+											<li><a class="site-button instagram  circle-sm fab fa-instagram  " href="javascript:void(0);"></a></li>
+										</ul>
+									</div>
+                                </div>
+                            </div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			{% endif %}
+			<!-- Courses End -->
+			<!-- Latests News -->
+			{% if posts %}
+			<div class="section-full content-inner bg-gray wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
+				<div class="container">
+					<div class="section-head text-black text-center">
+						<h2 class="title">{% translate 'blog' 'title' lang %}</h2>
+					</div>
+					<div class="blog-carousel owl-carousel owl-btn-3 owl-btn-center-lr">
+						{% for post in posts %}
+						<div class="item">
+							<div class="blog-post blog-grid blog-rounded blog-effect1">
+                                <div class="dlab-post-media dlab-img-effect"> 
+									<a href="blog-single.html"><img src="{{ post.image.url }}" alt=""></a> 
+								</div>
+								<div class="dlab-info p-a20">
+                                    <div class="dlab-post-meta">
+										<ul>
+											<li class="post-author"> <i class="la la-user-circle"></i>{{ post.author }}</li>
+										</ul>
+									</div>
+									<div class="dlab-post-title ">
+                                        <h4 class="post-title"><a href="blog-single.html">{% localize post 'title' lang %}</a></h4>
+                                    </div>
+                                    <div class="dlab-post-text">
+                                        <p>{% localize post 'description' lang %}</p>
+                                    </div>
+									<div class="post-footer">
+										<div class="dlab-post-meta">
+											<ul>
+												<li class="post-date"> <i class="la la-clock"></i> <strong>{{ post.created_at|date:'Y-m-d H:i' }}</strong></li>
+											</ul>
+										</div>
+										<ul class="dlab-social-icon dez-border">
+											<li><a class="site-button facebook circle-sm fab fa-facebook-f" href="javascript:void(0);"></a></li>
+											<li><a class="site-button twitter circle-sm fab fa-twitter " href="javascript:void(0);"></a></li>
+											<li><a class="site-button linkedin circle-sm fab fa-linkedin-in " href="javascript:void(0);"></a></li>
+											<li><a class="site-button instagram  circle-sm fab fa-instagram  " href="javascript:void(0);"></a></li>
+										</ul>
+									</div>
+                                </div>
+                            </div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+		<!-- contact area END -->
+    </div>
+    <!-- Content END -->
+{% endblock %}

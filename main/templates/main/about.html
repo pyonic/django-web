@@ -1,0 +1,127 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+{% load localize %}
+{% load translate %}
+{% block content %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+		<!-- inner page banner -->
+        <div class="dlab-bnr-inr overlay-black-middle text-center bg-pt" style="background-image:url({{ about.background.url }});">
+            <div class="container">
+                <div class="dlab-bnr-inr-entry align-m text-center">
+                    <h1 class="text-white">{% translate 'about' 'title' lang %}</h1>
+					<!-- Breadcrumb row -->
+					<div class="breadcrumb-row">
+						<ul class="list-inline">
+							<li><a href="index.html">Home</a></li>
+							<li>About us 1</li>
+						</ul>
+					</div>
+					<!-- Breadcrumb row END -->
+                </div>
+            </div>
+        </div>
+        <!-- inner page banner END -->
+        <!-- contact area -->
+        <div class="content-block">
+			<!-- About Services info -->
+			<div class="section-full content-inner bg-white wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
+				<div class="container">
+					<div class="row about-one align-items-center">
+						<div class="col-lg-6 m-b30">
+							<div class="about-img">
+								<img src="{{ about.video_poster.url }}" alt="">
+								<div class="video-bx">
+									<a href="{{ about.video }}" class="popup-youtube bg-primary"><i class="fas fa-play"></i></a>
+								</div>
+								<div class="info-bx">
+									<p>About FrganaPS </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 m-b30">
+							<div class="content-bx">
+								<h2 class="m-b15 title">{% localize about 'title' lang %}</h2>
+								<p class="m-b20">{% localize about 'description' lang %}</p>											
+								<h6 class="m-b20">{% localize about 'slogan' lang %}</h6>
+								<div class="d-flex align-items-center">
+									<div class="phone">
+										<i class="fas fa-phone-volume"></i>
+										<span>{{ phone }}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<!-- About Services info END -->
+			<!-- Company staus -->
+			<div class="section-full text-white bg-img-fix content-inner overlay-black-dark counter-staus-box" style="background-image:url({% static 'images/background/bg4.jpg' %});">
+				<div class="container">
+					<div class="row">
+						{% for ach in achievments %}
+						<div class="col-md-3 col-lg-3 m-b30 col-sm-6 col-6 wow fadeInUp counter-style-5" data-wow-duration="2s" data-wow-delay="0.2s">
+							<div class="icon-bx-wraper center">
+								<div class="icon-content">
+									<h2 class="dlab-tilte counter">{{ ach.count }}</h2>
+									<p>{% localize ach 'title' lang %}</p>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<!-- Company staus End -->
+			<!-- Latest blog -->
+			<div class="section-full content-inner bg-gray wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
+				<div class="container">
+					<div class="section-head text-center">
+						<h2 class="title">{% translate 'blog' 'title' lang %}</h2>
+					</div>
+					<div class="blog-carousel owl-none owl-carousel">
+						{% for post in lastest_blogs %}
+						<div class="item">
+							<div class="blog-post blog-grid blog-rounded blog-effect1 post-style-1">
+                                <div class="dlab-post-media dlab-img-effect"> 
+									<a href="blog-single.html"><img src="{{ post.image.url }}" alt=""></a> 
+								</div>
+								<div class="dlab-info p-a20">
+                                    <div class="dlab-post-meta">
+										<ul>
+											<li class="post-author"> <i class="la la-user-circle"></i> <a href="javascript:void(0);">{{ post.author }}</a> </li>
+										</ul>
+									</div>
+									<div class="dlab-post-title">
+                                        <h4 class="post-title"><a href="blog-single.html">{% localize post 'title' lang %}</a></h4>
+                                    </div>
+                                    <div class="dlab-post-text">
+                                        <p>{% localize post 'description' lang %}</p>
+                                    </div>
+									<div class="post-footer">
+										<div class="dlab-post-meta">
+											<ul>
+												<li class="post-date"> <i class="la la-clock"></i> {{ post.created_at }} </li>
+											</ul>
+										</div>
+										<ul class="dlab-social-icon dez-border">
+											<li><a class="site-button facebook circle-sm fab fa-facebook-f" href="javascript:void(0);"></a></li>
+											<li><a class="site-button twitter circle-sm fab fa-twitter " href="javascript:void(0);"></a></li>
+											<li><a class="site-button linkedin circle-sm fab fa-linkedin-in " href="javascript:void(0);"></a></li>
+											<li><a class="site-button instagram circle-sm fab fa-instagram  " href="javascript:void(0);"></a></li>
+										</ul>
+									</div>
+                                </div>
+                            </div>						
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<!-- Latest blog END -->
+		</div>
+		<!-- contact area END -->
+    </div>
+    <!-- Content END -->
+{% endblock %}
